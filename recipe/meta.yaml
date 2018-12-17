@@ -1,6 +1,6 @@
 {% set name = "quest" %}
-{% set version = "3.0.a1" %}
-{% set sha256 = "d58439c548433adcda98e695be53e526ba940a4b9c44fb9a05d92cd495cdd47f" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "b4ced3ed221971fcbbea0810df581c9db046a3e2f99187f94eef485c36c1e0f3" %}
 
 package:
   name: {{ name|lower }}
