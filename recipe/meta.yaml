@@ -7,8 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: erdc-{{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/erdc-{{ name[0] }}/erdc-{{ name }}/erdc-{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/09/37/879ba1653bee01d44bf606ed578d3db2332d72aa79d359aa6cad64a51435/erdc_quest-3.0.0.tar.gz
   sha256: {{ sha256 }}
 
 build:
