@@ -1,13 +1,14 @@
 {% set name = "quest" %}
-{% set version = "3.0.a1" %}
-{% set sha256 = "d58439c548433adcda98e695be53e526ba940a4b9c44fb9a05d92cd495cdd47f" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "b31b5483777db318ab9a92e3825c245305582c4f9c7ad5c2308bba4c38728062" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/erdc/{{ name }}/archive/{{ version }}.tar.gz
+  fn: erdc-{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/erdc-{{ name[0] }}/erdc-{{ name }}/erdc-{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -59,7 +60,6 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'https://github.com/erdc/quest'
-
   description: |
     Quest is a Python library that provides the ability to search, publish and 
     download data (both geographical and non-geographical) from multiple data 
