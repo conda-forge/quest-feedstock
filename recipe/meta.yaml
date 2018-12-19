@@ -1,13 +1,13 @@
 {% set name = "quest" %}
-{% set version = "3.0.a1" %}
-{% set sha256 = "d58439c548433adcda98e695be53e526ba940a4b9c44fb9a05d92cd495cdd47f" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "b31b5483777db318ab9a92e3825c245305582c4f9c7ad5c2308bba4c38728062" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/erdc/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/09/37/879ba1653bee01d44bf606ed578d3db2332d72aa79d359aa6cad64a51435/erdc_quest-3.0.0.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -19,22 +19,22 @@ requirements:
   host: 
     - python >=3
     - pip
+    - pbr
+    - pytest-runner
 
   run:
     - python >=3
-    - click
+    - pbr
     - distributed >=1.18
     - fiona
     - gdal
     - geojson
     - libgdal
-    - peewee
     - pandas <=0.22.0
     - geopandas
-    - jinja2
     - matplotlib
     - numpy
-    - param
+    - param >=1.8.1
     - pint
     - pony
     - psutil
@@ -43,7 +43,6 @@ requirements:
     - sortedcollections
     - tornado
     - ulmo >=0.8.3.2
-    - werkzeug
     
 test:
   imports:
@@ -59,7 +58,6 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'https://github.com/erdc/quest'
-
   description: |
     Quest is a Python library that provides the ability to search, publish and 
     download data (both geographical and non-geographical) from multiple data 
