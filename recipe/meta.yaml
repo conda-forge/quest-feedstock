@@ -19,12 +19,13 @@ requirements:
   host: 
     - python >=3
     - pip
+    - pbr
+    - pytest-runner
 
   run:
     - python >=3
     - pbr
     - pytest
-    - pytest-runner
     - click
     - distributed >=1.18
     - fiona
