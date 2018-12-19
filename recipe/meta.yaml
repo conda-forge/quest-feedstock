@@ -20,22 +20,17 @@ requirements:
     - python >=3
     - pip
     - pbr
-    - pytest-runner
 
   run:
     - python >=3
     - pbr
-    - pytest
-    - click
     - distributed >=1.18
     - fiona
     - gdal
     - geojson
     - libgdal
-    - peewee
     - pandas <=0.22.0
     - geopandas
-    - jinja2
     - matplotlib
     - numpy
     - param >=1.8.1
@@ -47,7 +42,6 @@ requirements:
     - sortedcollections
     - tornado
     - ulmo >=0.8.3.2
-    - werkzeug
     
 test:
   imports:
