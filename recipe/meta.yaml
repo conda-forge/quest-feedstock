@@ -1,13 +1,13 @@
 {% set name = "quest" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "b31b5483777db318ab9a92e3825c245305582c4f9c7ad5c2308bba4c38728062" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "1ffdc66c6c08b1310607fab5da0bab7680b2ee78d42b0f93c3848a26307e3c68" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/09/37/879ba1653bee01d44bf606ed578d3db2332d72aa79d359aa6cad64a51435/erdc_quest-3.0.0.tar.gz
+  url: https://files.pythonhosted.org/packages/ab/25/c545b465e082eef90a3bfd1442edaf38042b9ee2453730073893f0746ddf/erdc-quest-3.0.1.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -20,19 +20,18 @@ requirements:
     - python >=3
     - pip
     - pbr
-    - pytest-runner
 
   run:
     - python >=3
     - pbr
+    - cartopy
     - distributed >=1.18
-    - fiona
-    - gdal
     - geojson
-    - libgdal
+    - girder-client
+    - hs_restclient
+    - imageio
     - pandas <=0.22.0
     - geopandas
-    - matplotlib
     - numpy
     - param >=1.8.1
     - pint
@@ -40,10 +39,11 @@ requirements:
     - psutil
     - pyyaml
     - rasterio
-    - sortedcollections
     - tornado
     - ulmo >=0.8.3.2
-    
+    - whitebox_tools
+    - xarray
+
 test:
   imports:
     - quest
