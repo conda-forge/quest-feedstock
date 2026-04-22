@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "PBR_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - pbr
   run:
-    - python >=3
+    - python >={{ python_min }}
     - pbr
     - geojson
     - pandas
@@ -43,6 +43,8 @@ requirements:
     - xarray
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - quest
     - quest_provider_plugins
